@@ -50,18 +50,6 @@ double ** distance_matrix( int dim, city *cities )
 	return dmatrix;
 }
 
-//print the actual route
-void print_route( int *route, int dim )
-{
-	printf ( "Route:\n" );
-	for ( int i = 0 ; i < dim ; i++ )
-		if ( i == (dim-1) )
-			printf ( "%d ", route[i] );
-		else
-			printf ( "%d -> ", route[i] );
-	printf ( "\n" );
-}
-
 //copy a vector
 void vector_copier ( int *to_copy, int *result, int size )
 {

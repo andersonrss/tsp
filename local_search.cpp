@@ -4,6 +4,7 @@
 
 #include "types.h"
 #include "util.h"
+#include "route_functions.h"
 
 /******************** Heurístic Rules ********************
 
@@ -13,10 +14,7 @@
 
 **********************************************************/
 
-void vnd ( int *route, int dim, double *total_cost  )
+void vnd ( route *r, int dim, double *total_cost  )
 {
-	int chosen_father = 0;
-	int chosen_son = 0;
-	
-	
+	route nCurrent = *r;
 } 

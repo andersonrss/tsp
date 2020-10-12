@@ -30,12 +30,17 @@ int route_length ( route r )
 void print_route ( route r )
 {
 	printf ( "Route: " );
+	
+	route rAux = r;
 	while ( r ){
-		printf ( "%d ", r->id);
+		printf ( "%d -> ", r->id);
 		r = r->next;
+		if ( r == rAux )
+			break;
 	}
 	
 	printf ( "\n" );
+	free ( rAux );
 }
 
 void insert_city ( route *r, int id, int x, int y )

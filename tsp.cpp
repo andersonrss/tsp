@@ -20,13 +20,12 @@ int main ( int argc, char **argv )
 
 	double **dmatrix = distance_matrix ( dim, cities );
 
-	int *route = greed ( dmatrix, dim, &total_cost );
-
-	vnd ( route, dim, &total_cost );
-
-	//printf ( "Total Cost: %.2lf\n", total_cost );
+	route r = greed ( dmatrix, dim, &total_cost, cities );
 	
-	print_route ( route, dim );
+	//printf ( "Total Cost: %.2lf\n", total_cost );
+	//print_route ( r );
+	
+	vnd ( &r, dim, &total_cost );
 
 	return 0;
 }
