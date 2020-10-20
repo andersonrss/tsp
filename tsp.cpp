@@ -22,11 +22,11 @@ int main ( int argc, char **argv )
 
 	route r = greed ( dmatrix, dim, cities );
 	
-	total_cost = route_total_cost ( r, dmatrix );
+	//total_cost = route_total_cost ( r, dmatrix );
 	
 	//printf("%lf\n", total_cost);
 	
-	int n = 3;
+	int n = 8;
 	vnd ( &r, dim, &total_cost, dmatrix, n );
 
 	return 0;
